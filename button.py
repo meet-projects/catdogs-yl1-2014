@@ -31,9 +31,13 @@ def gender(main_screen):
 	label2 = Label(20,50,400,100, "Gender:", (255,0,127), 100)
 	label2.draw_label(main_screen)
 	button3 = Button(100, 300, 300, 300 ,(255,0,127))
-	button4 = Button(450, 300,300,300, (255,0,127)) 
 	button3.draw_button(main_screen)
+	buttoning = pygame.image.load('index.JPG')
+	main_screen.blit(buttoning,button3.button_rec)
+	button4 = Button(450, 300,300,300, (255,0,127)) 
 	button4.draw_button(main_screen)
+	buttoning = pygame.image.load('S.JPG')
+	main_screen.blit(buttoning,button4.button_rec)
 	
 
 		
