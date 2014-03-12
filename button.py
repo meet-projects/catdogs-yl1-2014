@@ -30,20 +30,35 @@ def gender(main_screen):
 	main_screen.fill((0,204,204))
 	label2 = Label(20,50,400,100, "Gender:", (255,0,127), 100)
 	label2.draw_label(main_screen)
+	global button3
 	button3 = Button(100, 300, 300, 300 ,(255,0,127))
 	button3.draw_button(main_screen)
 	buttoning = pygame.image.load('index.JPG')
 	main_screen.blit(buttoning,button3.button_rec)
+	global button4
+	button4 = Button(450, 300,300,300, (255,0,127)) 
 	button4 = Button(450, 300,300,300, (255,0,127)) 
 	button4.draw_button(main_screen)
 	buttoning = pygame.image.load('SSS.JPG')
 	main_screen.blit(buttoning,button4.button_rec)
-	
 
+def age(main_screen):
+	main_screen.fill((0,204,204))
+	label2 = Label(20,50,400,100, "Age:", (255,0,127), 100)
+	label2.draw_label(main_screen)	
+	global button5
+	button5 = Button(70,150,80,80 ,(255,0,127))
+	#button6 = Button(
+	#button7 = Button(
+	#button8 = Button(
+	#button9 = Button(
+
+	
 		
 
 if __name__=="__main__":
 	pygame.init()	
+	screen = "breed"
 	main_screen = pygame.display.set_mode((900,900))
 	main_screen.fill((0,204,204))
 	button1 = Button(100, 300, 300, 300 ,(255,0,127))
@@ -58,8 +73,15 @@ if __name__=="__main__":
         	if ev.type == pygame.QUIT: 
             		sys.exit()
        		if ev.type == pygame.MOUSEBUTTONDOWN:
-            		clear_window(main_screen)	 
-			gender(main_screen)
-            		
+			x, y = ev.pos
+			if button1.button_rec.collidepoint(x, y) or button2.button_rec.collidepoint(x, y):
+				if screen=="breed":
+            				clear_window(main_screen)	 
+					gender(main_screen)
+					screen = "gender"
+				elif screen =="gender":
+					clear_window(main_screen)
+					age(main_screen)
+					screen =="age"
        		pygame.display.flip()
        		
