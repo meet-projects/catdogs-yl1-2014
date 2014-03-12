@@ -3,7 +3,7 @@ class CatDog(object):
         self.name = name
         self.age = age
         self.gender = gender
-	self.weight = weight
+	    self.weight = weight
 	
     def age_group(self):
         if self.age<=1:
@@ -22,15 +22,23 @@ class CatDogA(CatDog):
         self.name = name
         self.age = age
         self.gender = gender
-	self.weight = weight
-	self.breed = breed
-	self.color = color
+	    self.weight = weight
+	    self.breed = breed
+	    self.color = color
 
 class CatDogB(CatDog):
-    def __init__(self, name, age, gender, weight, breed=ab, color=black):
+    def __init__(self, name, age, gender, weight, breed=ab, color=orange):
         self.name = name
         self.age = age
         self.gender = gender
-	self.weight = weight
+	    self.weight = weight
 	
 
+
+if __name__=="__main__":
+    a = CatDogA("Michele", 1, Female, 8)
+    b = CatDogB("Rex", 7, Male, 17)
+    c = CatDogA("Johnny", 11, Male, 14)
+    d = CatDogB("Kelly," 14, Female, 11)
+
+   
