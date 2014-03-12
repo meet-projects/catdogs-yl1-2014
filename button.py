@@ -36,7 +36,7 @@ def gender(main_screen):
 	main_screen.blit(buttoning,button3.button_rec)
 	button4 = Button(450, 300,300,300, (255,0,127)) 
 	button4.draw_button(main_screen)
-	buttoning = pygame.image.load('S.JPG')
+	buttoning = pygame.image.load('SSS.JPG')
 	main_screen.blit(buttoning,button4.button_rec)
 	
 
