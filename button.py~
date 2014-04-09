@@ -49,8 +49,10 @@ def age(main_screen):
 	global button5
 	button5 = Button(140,150,200,100 ,(255,0,127))
 	button5.draw_button(main_screen)
+	global button6
 	button6 = Button(140,370,200,100 ,(255,0,127))
 	button6.draw_button(main_screen)
+	global b
 	button7 = Button(390,540,200,100 ,(255,0,127))
 	button7.draw_button(main_screen)
 	button8 = Button(600,370,200,100 ,(255,0,127))
@@ -69,10 +71,14 @@ if __name__=="__main__":
 	screen = "breed"
 	main_screen = pygame.display.set_mode((900,900))
 	main_screen.fill((0,204,204))
-	button1 = Button(100, 300, 300, 300 ,(255,0,127))
-	button2 = Button(450, 300,300,300, (255,0,127))
+	button1 = Button(100, 300, 300, 196 ,(255,0,127))
 	button1.draw_button(main_screen)
+	buttoning = pygame.image.load('CatDogB.jpg')
+	main_screen.blit(buttoning,button1.button_rec)
+	button2 = Button(450, 300,300,300, (255,0,127))
 	button2.draw_button(main_screen)
+	buttoning = pygame.image.load('CatDogAjpg.xcf')
+	main_screen.blit(buttoning,button2.button_rec)
 	label1 = Label(20,50, 400, 100, "Pick Your Breed:", (255,0,127), 100)
 	label1.draw_label(main_screen)
 	
@@ -91,7 +97,9 @@ if __name__=="__main__":
 					clear_window(main_screen)
 					age(main_screen)
 					screen =="age"
-				elif screen =="age":
+			elif button5.button_rec.collidepoint(x, y) or button6.button_rec.collidepoint(x, y) or button7.button_rec.collidepoint(x, y) or button8.button_rec.collidepoint(x, y) or button9.button_rec.collidepoint(x, y) or button9.button_rec.collidepoint(x, y):
+				if screen =="age":
+					print "hi"
 					clear_window(main_screen)
 					age(main_screen)
 					screen =="result"
