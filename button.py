@@ -62,24 +62,24 @@ def age(main_screen):
     button9 = Button(600,150,200,100 ,(255,0,127))
     button9.draw_button(main_screen)
 
+
 def result(main_screen):
     main_screen.fill((0,204,204))
 
-    
-        
+
 
 if __name__=="__main__":
     pygame.init()   
     screen = "breed"
     main_screen = pygame.display.set_mode((900,900))
-    main_screen.fill((0,204,204))
+    main_screen.fill((255,255,255))
     button1 = Button(100, 300, 300, 196 ,(255,0,127))
     button1.draw_button(main_screen)
     buttoning = pygame.image.load('CatDogB.jpg')
     main_screen.blit(buttoning,button1.button_rec)
-    button2 = Button(450, 300,300,300, (255,0,127))
+    button2 = Button(450, 300,300,196, (255,0,127))
     button2.draw_button(main_screen)
-    buttoning = pygame.image.load('CatDogAjpg.xcf')
+    buttoning = pygame.image.load('CatDogAjpg.jpg')
     main_screen.blit(buttoning,button2.button_rec)
     label1 = Label(20,50, 400, 100, "Pick Your Breed:", (255,0,127), 100)
     label1.draw_label(main_screen)
@@ -106,4 +106,4 @@ if __name__=="__main__":
                         age(main_screen)
                         screen ="result"
             pygame.display.flip()
-            
+        
