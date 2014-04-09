@@ -32,12 +32,12 @@ def gender(main_screen):
     label2 = Label(20,20,400,100, "Gender:", (0,0,0), 100)
     label2.draw_label(main_screen)
     global button3
-    button3 = Button(100, 300, 300, 300 ,(255,0,127))
+    button3 = Button(100, 200, 224, 315 ,(255,0,127))
     button3.draw_button(main_screen)
-    buttoning = pygame.image.load('male.JPG')
+    buttoning = pygame.image.load('male.jpg')
     main_screen.blit(buttoning,button3.button_rec)
     global button4
-    button4 = Button(450, 300,300,300, (255,0,127)) 
+    button4 = Button(550, 200,225,315, (255,0,127)) 
     #button4 = Button(450, 300,300,300, (255,0,127)) 
     button4.draw_button(main_screen)
     buttoning = pygame.image.load('female.JPG')
@@ -48,7 +48,7 @@ def gender(main_screen):
 
 def age(main_screen):
     main_screen.fill((255,255,255))
-    label2 = Label(20,20,400,100, "Age:", (255,0,127), 100)
+    label2 = Label(20,20,400,100, "Age:", (0,0,0), 100)
     label2.draw_label(main_screen)  
     global button5
     button5 = Button(140,150,200,100 ,(255,0,127))
