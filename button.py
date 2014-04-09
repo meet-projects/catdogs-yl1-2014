@@ -28,7 +28,11 @@ def clear_window(main_screen):
     main_screen.blit(button_sq, button_rec)
 def gender(main_screen):
     main_screen.fill((255,255,255))
+<<<<<<< HEAD
     label2 = Label(20,50,400,100, "Gender:", (0,0,0), 100)
+=======
+    label2 = Label(20,50,400,100, "Gender:", (255,0,127), 100)
+>>>>>>> d180e8abbacb18b3582aea09a30564dc7980a10a
     label2.draw_label(main_screen)
     global button3
     button3 = Button(100, 300, 300, 300 ,(255,0,127))
@@ -44,7 +48,11 @@ def gender(main_screen):
 
 def age(main_screen):
     main_screen.fill((255,255,255))
+<<<<<<< HEAD
     label2 = Label(20,50,400,100, "Age:", (0,0,0), 100)
+=======
+    label2 = Label(20,50,400,100, "Age:", (255,0,127), 100)
+>>>>>>> d180e8abbacb18b3582aea09a30564dc7980a10a
     label2.draw_label(main_screen)  
     global button5
     button5 = Button(140,150,200,100 ,(255,0,127))
@@ -64,8 +72,11 @@ def age(main_screen):
 
 
 def result(main_screen):
-    main_screen.fill((0,204,204))
-
+    main_screen.fill((255,255,255))
+    global button10
+    button10 = Button(200,200,500,500 ,(255,0,127))
+    button10.draw_button(main_screen)
+ 
 
 
 if __name__=="__main__":
@@ -101,9 +112,9 @@ if __name__=="__main__":
                         screen ="age"
                 elif button5.button_rec.collidepoint(x, y) or button6.button_rec.collidepoint(x, y) or button7.button_rec.collidepoint(x, y) or button8.button_rec.collidepoint(x, y) or button9.button_rec.collidepoint(x, y) or button9.button_rec.collidepoint(x, y):
                     if screen =="age":
-                        print "hi"
                         clear_window(main_screen)
-                        age(main_screen)
+                        result(main_screen)
                         screen ="result"
+
             pygame.display.flip()
         
