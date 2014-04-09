@@ -28,31 +28,23 @@ def clear_window(main_screen):
     main_screen.blit(button_sq, button_rec)
 def gender(main_screen):
     main_screen.fill((255,255,255))
-<<<<<<< HEAD
-    label2 = Label(20,50,400,100, "Gender:", (0,0,0), 100)
-=======
-    label2 = Label(20,50,400,100, "Gender:", (255,0,127), 100)
->>>>>>> d180e8abbacb18b3582aea09a30564dc7980a10a
+    label2 = Label(20,20,400,100, "Gender:", (0,0,0), 100)
     label2.draw_label(main_screen)
     global button3
     button3 = Button(100, 300, 300, 300 ,(255,0,127))
     button3.draw_button(main_screen)
-    buttoning = pygame.image.load('index.JPG')
+    buttoning = pygame.image.load('male.JPG')
     main_screen.blit(buttoning,button3.button_rec)
     global button4
     button4 = Button(450, 300,300,300, (255,0,127)) 
     #button4 = Button(450, 300,300,300, (255,0,127)) 
     button4.draw_button(main_screen)
-    buttoning = pygame.image.load('SSS.JPG')
+    buttoning = pygame.image.load('female.JPG')
     main_screen.blit(buttoning,button4.button_rec)
 
 def age(main_screen):
     main_screen.fill((255,255,255))
-<<<<<<< HEAD
-    label2 = Label(20,50,400,100, "Age:", (0,0,0), 100)
-=======
-    label2 = Label(20,50,400,100, "Age:", (255,0,127), 100)
->>>>>>> d180e8abbacb18b3582aea09a30564dc7980a10a
+    label2 = Label(20,20,400,100, "Age:", (255,0,127), 100)
     label2.draw_label(main_screen)  
     global button5
     button5 = Button(140,150,200,100 ,(255,0,127))
@@ -84,15 +76,15 @@ if __name__=="__main__":
     screen = "breed"
     main_screen = pygame.display.set_mode((900,900))
     main_screen.fill((255,255,255))
-    button1 = Button(100, 300, 300, 196 ,(255,0,127))
+    button1 = Button(50, 200, 375, 245 ,(255,0,127))
     button1.draw_button(main_screen)
     buttoning = pygame.image.load('CatDogB.jpg')
     main_screen.blit(buttoning,button1.button_rec)
-    button2 = Button(450, 300,300,196, (255,0,127))
+    button2 = Button(475,200,375,245, (255,0,127))
     button2.draw_button(main_screen)
     buttoning = pygame.image.load('CatDogAjpg.jpg')
     main_screen.blit(buttoning,button2.button_rec)
-    label1 = Label(20,50, 400, 100, "Pick Your Breed:", (0,0,0), 100)
+    label1 = Label(20,20, 400, 100, "Pick Your Breed:", (0,0,0), 100)
     label1.draw_label(main_screen)
     
     while True: 
