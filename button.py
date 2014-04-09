@@ -113,7 +113,7 @@ if __name__=="__main__":
                         clear_window(main_screen)
                         age(main_screen)
                         screen ="age"
-                    if back.collidepoint(x, y):
+                    if back.button_rec.collidepoint(x, y):
                         clear_window(main_screen)
                         breed(main_screen)
                         screen = "breed"
