@@ -65,7 +65,9 @@ def age(main_screen):
     global button9
     button9 = Button(600,150,200,100 ,(255,0,127))
     button9.draw_button(main_screen)
-
+    global back1
+    back1 = Button(10, 850,150, 200, (255,0,127))
+    back1.draw_button(main_screen)
 
 def result(main_screen):
     main_screen.fill((255,255,255))
@@ -78,12 +80,12 @@ def breed(main_screen):
     global button1
     button1 = Button(50, 200, 375, 245 ,(255,0,127))
     button1.draw_button(main_screen)
-    buttoning = pygame.image.load('CatDogB.jpg')
+    buttoning = pygame.image.load('Golden-Manx.jpg')
     main_screen.blit(buttoning,button1.button_rec)
     global button2
     button2 = Button(475,200,375,245, (255,0,127))
     button2.draw_button(main_screen)
-    buttoning = pygame.image.load('CatDogAjpg.jpg')
+    buttoning = pygame.image.load('Persian-Terrier.jpg')
     main_screen.blit(buttoning,button2.button_rec)
     global label1
     label1 = Label(20,20, 400, 100, "Pick Your Breed:", (0,0,0), 100)
@@ -96,7 +98,9 @@ if __name__=="__main__":
     screen = "breed"
     main_screen = pygame.display.set_mode((900,900))
     breed(main_screen)
-    
+    name = ""
+    g = ""
+    a = ""
     while True: 
             ev = pygame.event.poll()
             if ev.type == pygame.QUIT: 
@@ -108,12 +112,20 @@ if __name__=="__main__":
                         clear_window(main_screen)    
                         gender(main_screen)
                         screen = "gender"
+                        if button1.button_rec.collidepoint(x, y):
+                            name = "Golden-Manx"
+                        elif button2.button_rec.collidepoint(x,y):
+                            name = "Persian-Terrier"
                 elif screen=="gender":
-                    if button1.button_rec.collidepoint(x, y) or button2.button_rec.collidepoint(x, y):
+                    if button3.button_rec.collidepoint(x, y) or button4.button_rec.collidepoint(x, y):
                         clear_window(main_screen)
                         age(main_screen)
                         screen ="age"
-                    if back.button_rec.collidepoint(x, y):
+                        if button3.button_rec.collidepoint(x, y):
+                            g = "Male"
+                        elif button4.button_rec.collidepoint(x,y):
+                            g = "Female"
+                    elif back.button_rec.collidepoint(x, y):
                         clear_window(main_screen)
                         breed(main_screen)
                         screen = "breed"
@@ -122,6 +134,20 @@ if __name__=="__main__":
                         clear_window(main_screen)
                         result(main_screen)
                         screen ="result"
+                        if button5.button_rec.collidepoint(x, y):
+                            a = "0-1"
+                        elif button6.button_rec.collidepoint(x,y):
+                            a = "1-4"
+                        elif button7.button_rec.collidepoint(x, y):
+                            a = "4-7"
+                        elif button8.button_rec.collidepoint(x,y):
+                            a = "7-11"
+                        elif button9.button_rec.collidepoint(x, y):
+                            a = "11+"
+                    elif back1.button_rec.collidepoint(x, y):
+                        clear_window(main_screen)
+                        gender(main_screen)
+                        screen = "gender"
                 elif screen=="result":
                     print "result"
                         
