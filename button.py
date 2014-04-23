@@ -27,6 +27,19 @@ def clear_window(main_screen):
     button_rec = pygame.Rect(0, 0, 900, 900)
     button_sq = pygame.Surface([900, 900])  
     main_screen.blit(button_sq, button_rec)
+
+def main_page(main_screen):
+    main_screen.fill((255,255,255))
+    global main_label
+    main_label = Label(25,75,850,425, "",(0,0,0),182)
+    main_label.draw_label(main_screen)
+
+    global start_button
+    start_button = Button(360, 500, 200, 60, (255,0,127))
+    start_button.draw_button(main_screen)
+
+   # main_label = Label(120,300, 500,70, "CatDogs", 150 , (0,0,0))
+
 def gender(main_screen):
     main_screen.fill((255,255,255))
     label2 = Label(20,20,400,100, "Gender:", (0,0,0), 100)
@@ -98,18 +111,16 @@ def result(main_screen):
     label_result1 = Label(30,20, 350, 100, name, (0,0,0), 60)
     label_result1.draw_label(main_screen)
     global label_result2
-<<<<<<< HEAD
     label_result2 = Label(30,90, 350, 100, g , (0,0,0), 60)
     label_result2.draw_label(main_screen)
     global label_result3
     label_result3 = Label(30,140, 350, 100, a, (0,0,0), 60)
-=======
-    label_result2 = Label(35,80, 350, 100, g , (0,0,0), 60)
-    label_result2.draw_label(main_screen)
-    global label_result3
-    label_result3 = Label(31,120, 350, 100, a, (0,0,0), 60)
->>>>>>> 1b12e716c9bd50caf08c8d31a582d7e60f500abb
     label_result3.draw_label(main_screen)
+    global submit_button
+    submit_button = Button(730, 850, 150,50, (255,0,127))
+    submit_button.draw_button(main_screen)
+
+
 def breed(main_screen):
     main_screen.fill((255,255,255))
     global button1
@@ -126,13 +137,16 @@ def breed(main_screen):
     label1 = Label(20,20, 400, 100, "Pick Your Breed:", (0,0,0), 100)
     label1.draw_label(main_screen)
  
+def closing(main_screen):
+    main_screen.fill((255,255,255))
+    #global Label()
 
 
 if __name__=="__main__":
     pygame.init()    
-    screen = "breed"
+    screen = "main_page"
     main_screen = pygame.display.set_mode((900,900))
-    breed(main_screen)
+    main_page(main_screen)
     name = ""
     g = ""
     a = ""
@@ -190,6 +204,10 @@ if __name__=="__main__":
                             clear_window(main_screen)
                             age(main_screen)
                             screen = "age"
+                        elif submit_button.button_rec.collidepoint(x,y):
+                            clear_window(main_screen)
+                            closing(main_screen)
+                            screen == "closing"
 
             pygame.display.flip()
         
