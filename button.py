@@ -43,9 +43,10 @@ def gender(main_screen):
     buttoning = pygame.image.load('female.JPG')
     main_screen.blit(buttoning,button4.button_rec)
     global back
-    back = Button(10, 850,150, 50, (255,0,127))
+    back = Button(20, 850,150, 50, (255,0,127))
     back.draw_button(main_screen)
-
+    buttoning = pygame.image.load('back.jpg')
+    main_screen.blit(buttoning,back.button_rec)
 def age(main_screen):
     main_screen.fill((255,255,255))
     label2 = Label(20,20,400,100, "Age:", (0,0,0), 100)
@@ -76,25 +77,31 @@ def age(main_screen):
     buttoning = pygame.image.load('1-4.jpg')
     main_screen.blit(buttoning,button9.button_rec)
     global back1
-    back1 = Button(10, 850,150, 50, (255,0,127))
+    back1 = Button(20, 850,150, 50, (255,0,127))
     back1.draw_button(main_screen)
+    buttoning = pygame.image.load('back.jpg')
+    main_screen.blit(buttoning,back1.button_rec)
 
 def result(main_screen):
     main_screen.fill((255,255,255))
     global button10
-    button10 = Button(200,200,500,500 ,(255,0,127))
+    button10 = Button(200,200,500,307 ,(255,0,127))
     button10.draw_button(main_screen)
+    buttoning = pygame.image.load(name + '-big.jpg')
+    main_screen.blit(buttoning,button10.button_rec)
     global back3
-    back3 = Button(10, 850,150, 50, (255,0,127))
+    back3 = Button(20, 850,150, 50, (255,0,127))
     back3.draw_button(main_screen)
+    buttoning = pygame.image.load('back.jpg')
+    main_screen.blit(buttoning,back3.button_rec)
     global label_result1
     label_result1 = Label(30,20, 350, 100, name, (0,0,0), 60)
     label_result1.draw_label(main_screen)
     global label_result2
-    label_result2 = Label(30,80, 350, 100, g , (0,0,0), 60)
+    label_result2 = Label(35,80, 350, 100, g , (0,0,0), 60)
     label_result2.draw_label(main_screen)
     global label_result3
-    label_result3 = Label(30,120, 350, 100, a, (0,0,0), 60)
+    label_result3 = Label(31,120, 350, 100, a, (0,0,0), 60)
     label_result3.draw_label(main_screen)
 def breed(main_screen):
     main_screen.fill((255,255,255))
@@ -176,9 +183,6 @@ if __name__=="__main__":
                             clear_window(main_screen)
                             age(main_screen)
                             screen = "age"
-                    
-
-                        
 
             pygame.display.flip()
         
