@@ -38,7 +38,8 @@ def main_page(main_screen):
     global start_button
     start_button = Button(730, 850, 150,50, (255,0,127))
     start_button.draw_button(main_screen)
-
+    buttoning = pygame.image.load('start.jpg')
+    main_screen.blit(buttoning,start_button.button_rec)
    # main_label = Label(120,300, 500,70, "CatDogs", 150 , (0,0,0))
 
 def gender(main_screen):
@@ -143,6 +144,8 @@ def closing(main_screen):
     global thank_you
     thank_you= Button(25,75,850,425,(255,0,127))
     thank_you.draw_button(main_screen)
+    buttoning = pygame.image.load('end.jpg')
+    main_screen.blit(buttoning,thank_you.button_rec)
 
 if __name__=="__main__":
     pygame.init()    
