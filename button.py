@@ -138,7 +138,9 @@ def breed(main_screen):
     global label1
     label1 = Label(20,20, 400, 100, "Pick Your Breed:", (0,0,0), 100)
     label1.draw_label(main_screen)
- 
+    global back_button
+    back_button = Button(20, 850,150, 50, (255,0,127))
+    back_button.draw_button(main_screen)
 def closing(main_screen):
     main_screen.fill((255,255,255))
     global thank_you
@@ -175,6 +177,10 @@ if __name__=="__main__":
                             name = "Golden-Manx"
                         elif button2.button_rec.collidepoint(x,y):
                             name = "Persian-Terrier"
+                    elif back_button.button_rec.collidepoint(x,y):
+                        clear_window(main_screen)    
+                        main_page(main_screen)
+                        screen = "main_page"
                 elif screen=="gender":
                     if button3.button_rec.collidepoint(x, y) or button4.button_rec.collidepoint(x, y):
                         clear_window(main_screen)
