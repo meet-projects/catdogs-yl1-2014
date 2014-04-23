@@ -121,6 +121,8 @@ def result(main_screen):
     global submit_button
     submit_button = Button(730, 850, 150,50, (255,0,127))
     submit_button.draw_button(main_screen)
+    buttoning = pygame.image.load('done.jpg')
+    main_screen.blit(buttoning,submit_button.button_rec)
 
 
 def breed(main_screen):
@@ -141,6 +143,8 @@ def breed(main_screen):
     global back_button
     back_button = Button(20, 850,150, 50, (255,0,127))
     back_button.draw_button(main_screen)
+    buttoning = pygame.image.load('back.jpg')
+    main_screen.blit(buttoning,back_button.button_rec)
 def closing(main_screen):
     main_screen.fill((255,255,255))
     global thank_you
