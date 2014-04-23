@@ -31,16 +31,10 @@ def clear_window(main_screen):
 def main_page(main_screen):
     main_screen.fill((255,255,255))
     global title
-<<<<<<< HEAD
-    title = Button(25,75,850,425,(0,0,0))
-    title.draw_button(main_screen)
-
-=======
     title = Button(25,75,850,425, (0,0,0))
     title.draw_button(main_screen)
     buttoning = pygame.image.load('title.jpg')
     main_screen.blit(buttoning,title.button_rec)
->>>>>>> f88cf7e545572b155e6dcc2543137ec3c1bcd686
     global start_button
     start_button = Button(730, 850, 150,50, (255,0,127))
     start_button.draw_button(main_screen)
