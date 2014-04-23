@@ -53,18 +53,28 @@ def age(main_screen):
     global button5
     button5 = Button(140,150,200,100 ,(255,0,127))
     button5.draw_button(main_screen)
+    buttoning = pygame.image.load('0-1.jpg')
+    main_screen.blit(buttoning,button5.button_rec)
     global button6
     button6 = Button(140,370,200,100 ,(255,0,127))
     button6.draw_button(main_screen)
+    buttoning = pygame.image.load('4-7.jpg')
+    main_screen.blit(buttoning,button6.button_rec)
     global button7
-    button7 = Button(390,540,200,100 ,(255,0,127))
+    button7 = Button(380,540,200,100 ,(255,0,127))
     button7.draw_button(main_screen)
+    buttoning = pygame.image.load('11+.jpg')
+    main_screen.blit(buttoning,button7.button_rec)
     global button8
     button8 = Button(600,370,200,100 ,(255,0,127))
     button8.draw_button(main_screen)
+    buttoning = pygame.image.load('7-11.jpg')
+    main_screen.blit(buttoning,button8.button_rec)
     global button9
     button9 = Button(600,150,200,100 ,(255,0,127))
     button9.draw_button(main_screen)
+    buttoning = pygame.image.load('1-4.jpg')
+    main_screen.blit(buttoning,button9.button_rec)
     global back1
     back1 = Button(10, 850,150, 200, (255,0,127))
     back1.draw_button(main_screen)
