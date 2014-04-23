@@ -30,12 +30,12 @@ def clear_window(main_screen):
 
 def main_page(main_screen):
     main_screen.fill((255,255,255))
-    global main_label
-    main_label = Label(25,75,850,425, "",(0,0,0),182)
-    main_label.draw_label(main_screen)
+    global title
+    title = Button(25,75,850,425,(0,0,0))
+    title.draw_button(main_screen)
 
     global start_button
-    start_button = Button(360, 500, 200, 60, (255,0,127))
+    start_button = Button(730, 850, 150,50, (255,0,127))
     start_button.draw_button(main_screen)
 
    # main_label = Label(120,300, 500,70, "CatDogs", 150 , (0,0,0))
@@ -139,8 +139,9 @@ def breed(main_screen):
  
 def closing(main_screen):
     main_screen.fill((255,255,255))
-    #global Label()
-
+    global thank_you
+    thank_you= Button(25,75,850,425,(255,0,127))
+    thank_you.draw_button(main_screen)
 
 if __name__=="__main__":
     pygame.init()    
@@ -156,6 +157,11 @@ if __name__=="__main__":
                     sys.exit()
             if ev.type == pygame.MOUSEBUTTONDOWN:
                 x, y = ev.pos
+                if screen == "main_page":
+                    if start_button.button_rec.collidepoint(x,y):
+                        clear_window(main_screen)
+                        breed(main_screen)
+                        screen= "breed"
                 if screen=="breed":
                     if button1.button_rec.collidepoint(x, y) or button2.button_rec.collidepoint(x, y):
                         clear_window(main_screen)    
