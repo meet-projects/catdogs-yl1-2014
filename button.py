@@ -43,7 +43,7 @@ def gender(main_screen):
     buttoning = pygame.image.load('female.JPG')
     main_screen.blit(buttoning,button4.button_rec)
     global back
-    back = Button(10, 850,150, 200, (255,0,127))
+    back = Button(10, 850,150, 50, (255,0,127))
     back.draw_button(main_screen)
 
 def age(main_screen):
@@ -76,7 +76,7 @@ def age(main_screen):
     buttoning = pygame.image.load('1-4.jpg')
     main_screen.blit(buttoning,button9.button_rec)
     global back1
-    back1 = Button(10, 850,150, 200, (255,0,127))
+    back1 = Button(10, 850,150, 50, (255,0,127))
     back1.draw_button(main_screen)
 
 def result(main_screen):
@@ -84,7 +84,18 @@ def result(main_screen):
     global button10
     button10 = Button(200,200,500,500 ,(255,0,127))
     button10.draw_button(main_screen)
-
+    global back3
+    back3 = Button(10, 850,150, 50, (255,0,127))
+    back3.draw_button(main_screen)
+    global label_result1
+    label_result1 = Label(30,20, 350, 100, name, (0,0,0), 60)
+    label_result1.draw_label(main_screen)
+    global label_result2
+    label_result2 = Label(30,80, 350, 100, g , (0,0,0), 60)
+    label_result2.draw_label(main_screen)
+    global label_result3
+    label_result3 = Label(30,120, 350, 100, a, (0,0,0), 60)
+    label_result3.draw_label(main_screen)
 def breed(main_screen):
     main_screen.fill((255,255,255))
     global button1
@@ -104,7 +115,7 @@ def breed(main_screen):
 
 
 if __name__=="__main__":
-    pygame.init()   
+    pygame.init()    
     screen = "breed"
     main_screen = pygame.display.set_mode((900,900))
     breed(main_screen)
@@ -141,9 +152,7 @@ if __name__=="__main__":
                         screen = "breed"
                 elif screen=="age":
                     if button5.button_rec.collidepoint(x, y) or button6.button_rec.collidepoint(x, y) or button7.button_rec.collidepoint(x, y) or button8.button_rec.collidepoint(x, y) or button9.button_rec.collidepoint(x, y) or button9.button_rec.collidepoint(x, y):
-                        clear_window(main_screen)
-                        result(main_screen)
-                        screen ="result"
+                        
                         if button5.button_rec.collidepoint(x, y):
                             a = "0-1"
                         elif button6.button_rec.collidepoint(x,y):
@@ -154,12 +163,21 @@ if __name__=="__main__":
                             a = "7-11"
                         elif button9.button_rec.collidepoint(x, y):
                             a = "11+"
-                    elif back1.button_rec.collidepoint(x, y):
+
                         clear_window(main_screen)
-                        gender(main_screen)
-                        screen = "gender"
+                        result(main_screen) 
+                        screen ="result"
+                    elif back1.button_rec.collidepoint(x, y):
+                            clear_window(main_screen)
+                            gender(main_screen)
+                            screen = "gender"
                 elif screen=="result":
-                    print "result"
+                        if back3.button_rec.collidepoint(x, y):
+                            clear_window(main_screen)
+                            age(main_screen)
+                            screen = "age"
+                    
+
                         
 
             pygame.display.flip()
