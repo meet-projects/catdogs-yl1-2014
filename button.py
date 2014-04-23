@@ -91,10 +91,10 @@ def result(main_screen):
     label_result1 = Label(30,20, 350, 100, name, (0,0,0), 60)
     label_result1.draw_label(main_screen)
     global label_result2
-    label_result2 = Label(30,80, 350, 100, g , (0,0,0), 60)
+    label_result2 = Label(30,90, 350, 100, g , (0,0,0), 60)
     label_result2.draw_label(main_screen)
     global label_result3
-    label_result3 = Label(30,120, 350, 100, a, (0,0,0), 60)
+    label_result3 = Label(30,140, 350, 100, a, (0,0,0), 60)
     label_result3.draw_label(main_screen)
 def breed(main_screen):
     main_screen.fill((255,255,255))
@@ -156,13 +156,13 @@ if __name__=="__main__":
                         if button5.button_rec.collidepoint(x, y):
                             a = "0-1"
                         elif button6.button_rec.collidepoint(x,y):
-                            a = "1-4"
-                        elif button7.button_rec.collidepoint(x, y):
                             a = "4-7"
+                        elif button7.button_rec.collidepoint(x, y):
+                            a = "11+"
                         elif button8.button_rec.collidepoint(x,y):
                             a = "7-11"
                         elif button9.button_rec.collidepoint(x, y):
-                            a = "11+"
+                            a = "1-4"
 
                         clear_window(main_screen)
                         result(main_screen) 
@@ -172,10 +172,8 @@ if __name__=="__main__":
                             gender(main_screen)
                             screen = "gender"
                 elif screen=="result":
-                        if back3.button_rec.collidepoint(x, y):
-                            clear_window(main_screen)
-                            age(main_screen)
-                            screen = "age"
+                    if 
+
                     
 
                         
