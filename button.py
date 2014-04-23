@@ -43,7 +43,7 @@ def gender(main_screen):
     buttoning = pygame.image.load('female.JPG')
     main_screen.blit(buttoning,button4.button_rec)
     global back
-    back = Button(10, 850,150, 200, (255,0,127))
+    back = Button(10, 850,150, 50, (255,0,127))
     back.draw_button(main_screen)
 
 def age(main_screen):
@@ -66,7 +66,7 @@ def age(main_screen):
     button9 = Button(600,150,200,100 ,(255,0,127))
     button9.draw_button(main_screen)
     global back1
-    back1 = Button(10, 850,150, 200, (255,0,127))
+    back1 = Button(10, 850,150, 50, (255,0,127))
     back1.draw_button(main_screen)
 
 def result(main_screen):
@@ -75,7 +75,7 @@ def result(main_screen):
     button10 = Button(200,200,500,500 ,(255,0,127))
     button10.draw_button(main_screen)
     global back3
-    back3 = Button(10, 850,150, 200, (255,0,127))
+    back3 = Button(10, 850,150, 50, (255,0,127))
     back3.draw_button(main_screen)
     global label_result1
     label_result1 = Label(30,20, 350, 100, name, (0,0,0), 60)
