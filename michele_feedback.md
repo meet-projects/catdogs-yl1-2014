@@ -1,7 +1,8 @@
 Great job finishing your project. I hope you all are proud of what you accomplished, because it was a hard problem that was hard to solve. I have some feedback for you: 
 
 * Your main code is in the `button.py` file instead of `main.py`, which is deceptive and not good coding practices. When I download all of your files and want to run your game, I naturally look for `main.py`. 
-* The program window is too big - I can't play it on my laptop in the way you have it now. 
+* The program window is too big - I can't play it on my laptop in the way you have it now (most screens don't fit more than 600 x 600 if you want it to be square). 
+* Below the pictures of MALE / FEMALE and the two breeds of catdogs, it would have been nice to include a label saying what it is.
 * The button class has no erase method, and it could have helped you a lot.
 * The "clear window" function is a fantastic example of when and where to use a function. 
 * In the `Label` class, the `orderlabel` and `label` variables should be made in the constructor - the reason is that they need to be created when you first create the label. 
