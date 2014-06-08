@@ -1,3 +1,6 @@
+Michele's feedback on your group project
+---
+
 Great job finishing your project. I hope you all are proud of what you accomplished, because it was a hard problem that was hard to solve. I have some feedback for you: 
 
 * Your main code is in the `button.py` file instead of `main.py`, which is deceptive and not good coding practices. When I download all of your files and want to run your game, I naturally look for `main.py`. 
